@@ -1,6 +1,7 @@
 package com.example.java;
 
 // we will use an two 1-D arrays to track rows and columns with zero(s) in them.
+// the above is the whole trick for solving the problem.
 public class Chap1_8A_ZeroMatrix {
 
     public static void main (String[] string) {
@@ -18,6 +19,25 @@ public class Chap1_8A_ZeroMatrix {
                 {17, 18, 19, 20}};
         startZeroMatrix(mat);
 
+
+
+        int[][] mat1 = {
+                {1, 3, 4, 52},
+                {12, 13, 15, 18},
+                {20, 21, 0, 25},
+                {29, 31, 34, 39}};
+        startZeroMatrix(mat1);
+
+        int[][] mat2 = {{1,2,3,4,5,6},
+                {8,7,6,5,4,3},
+                {19,8,7,6,0,1}};
+        startZeroMatrix(mat2);
+
+        int[][] mat3 = {{1,2,0},
+                {2,4,4},
+                {19,8,7},
+                {5,0,1}};
+        startZeroMatrix(mat3);
     }
 
     private static void startZeroMatrix(int[][] mat) {
@@ -72,5 +92,4 @@ public class Chap1_8A_ZeroMatrix {
             System.out.println("");
         }
     }
-
 }
