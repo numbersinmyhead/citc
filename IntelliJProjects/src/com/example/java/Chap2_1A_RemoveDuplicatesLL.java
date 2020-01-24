@@ -36,11 +36,15 @@ public class Chap2_1A_RemoveDuplicatesLL {
 
         while (n != null) {
             if (set.contains(n.data)) {
-                previous.next = n.next;
+                previous.next = n.next; //here when we find a duplicate entry in the hash table, then we use
+                                        // previous.next to skip the current object (i.e. duplicated entry) by pointing
+                                        // previous.next to n.next. We know that n.next is the next entry after the
+                                        //duplicated entry. This is how we get rid of the duplicated entry in the LL
             }
             else {
                 set.add(n.data);
-                previous = n;
+                previous = n; //previous would store a reference to the current n object. We later use previous' next object
+                                // i.e. previous.next to skip the duplicate element which we find in our hashtable.
             }
             n = n.next;
         }
