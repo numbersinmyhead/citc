@@ -20,6 +20,18 @@ public class LinkedList2_2B_ReturnKthToLastLLRecursion {
         temp.next = node;
     }
 
+    public LinkedList2_2B_ReturnKthToLastLLRecursion addElemToEndOfLLAndReturnThePtrToIt(int data) {
+        LinkedList2_2B_ReturnKthToLastLLRecursion node = new LinkedList2_2B_ReturnKthToLastLLRecursion(data);
+        LinkedList2_2B_ReturnKthToLastLLRecursion temp = this;
+
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+
+        temp.next = node;
+        return temp.next;
+    }
+
     public void printLLComplete(LinkedList2_2B_ReturnKthToLastLLRecursion head) {
         System.out.println("START");
         while (head != null) {
